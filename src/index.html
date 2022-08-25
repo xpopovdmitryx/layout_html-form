@@ -11,27 +11,36 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application"
-    method="post"
+    <form
+      action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+      method="post"
+      onsubmit="onSubmit()"
     >
-      <fieldset class="fieldset-top">
+      <fieldset  class="fieldset">
         <legend>Personal information</legend>
-        <div class="form-field-top">
+        <div class="form-field">
           <label>
             Surname:
-            <input type="text" autocomplete="off">
+            <input
+              type="text"
+              autocomplete="off"
+            >
           </label>
         </div>
         <div class="form-field">
           <label>
             Name:
-            <input type="text" autocomplete="off">
+            <input
+              type="text"
+              autocomplete="off"
+            >
           </label>
         </div>
         <div class="form-field">
           <label>
             How old are You?
-            <input type="number"
+            <input
+              type="number"
               value="12"
               min="1"
               max="100"
@@ -47,7 +56,8 @@
         <div class="form-field">
           <label>
             I accept the term of the agreement
-            <input type="checkbox"
+            <input
+              type="checkbox"
               name="term"
               required
             >
@@ -56,54 +66,69 @@
       </fieldset>
       <fieldset class="fieldset">
         <legend>Registration</legend>
-        <div class="form-field-top">
+        <div class="form-field">
           <label>
             E-mail:
-            <input type="email" placeholder="email@example.com">
+            <input
+              type="email"
+              placeholder="email@example.com"
+              required
+            >
           </label>
         </div>
         <div class="form-field">
           <label>
             Password:
-            <input type="password">
+            <input
+              type="password"
+              name="password"
+              minlength="4"
+              maxlength="8"
+              required
+            >
           </label>
         </div>
       </fieldset>
       <fieldset class="fieldset">
         <legend>An interesting fact about you!</legend>
-        <div class="form-field-top radio">
+        <div class="form-field">
           <label>
             Do you love cats?
             <label>
-              <input type="radio" name="cats"
-                value="Y"
+              <input
+                type="radio"
+                name="cats"
+                value="YES"
               >
             Yes
             </label>
             <label>
-              <input type="radio" name="cats"
-                value="N"
+              <input
+                type="radio"
+                name="cats"
+                value="NO"
               >
             No
             </label>
           </label>
         </div>
-        <div class="form-field color">
+        <div class="form-field">
           <label>
             What is your favorite color?
             <input type="color">
           </label>
         </div>
-        <div class="form-field time">
+        <div class="form-field">
           <label>
             What time do you go to bed?
             <input type="time">
           </label>
         </div>
-        <div class="form-field select">
+        <div class="form-field">
           <label>
             What are your favorite brand of cars?
-            <select name="car"
+            <select
+              name="car"
               multiple
               required
             >
@@ -113,10 +138,11 @@
             </select>
           </label>
         </div>
-        <div class="form-field range">
+        <div class="form-field">
           <label>
             How do you rate our work?
-            <input type="range"
+            <input
+              type="range"
               value="0"
               min="0"
               max="10"
@@ -126,7 +152,7 @@
       </fieldset>
       <fieldset class="fieldset">
         <legend>Additional info:</legend>
-        <div class="form-field-top textarea">
+        <div class="form-field">
           <label>
             Comments:
             <textarea
@@ -138,22 +164,21 @@
             </textarea>
           </label>
         </div>
-        <div class="form-field select">
+        <div class="form-field">
           <label>
             Would you recommend us?
-            <select class="arrows"
+            <select
+              class="arrows"
               name="recommend"
               required
             >
-              <option value="Y">yes</option>
-              <option value="N">no</option>
+              <option value="YES">yes</option>
+              <option value="NO">no</option>
             </select>
           </label>
         </div>
       </fieldset>
-      <div class="form-field">
-        <button type="submit">Submit</button>
-      </div>
+      <button type="submit">Submit</button>
     </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>
